@@ -1,0 +1,327 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+:root {
+    --primaria: #4f46e5;
+    --secundaria: #7c3aed;
+    --escuro: #0f172a;
+    --maisEscuro: #0a0f1c;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: rgb(3, 2, 3);
+    color: var(--claro);
+
+}
+
+.nav {
+    position: fixed;
+    background-color: rgba(45, 49, 51, 0.466);
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1.5em;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    justify-items: space-between;
+    font-size: 1.5em;
+    font-style: bold;
+    font-display: flex;
+
+
+}
+
+.menu-nav {
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+
+
+}
+
+.menu-nav:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: yellowgreen;
+}
+
+.menu-nav:hover:after {
+
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.menu-nav:hover {
+
+    color: yellowgreen;
+    transition: 0.9s;
+}
+
+.foto {
+    width: 250px;
+    height: 250px;
+    margin-top: 100px;
+    border: 4px solid rgb(0, 68, 100);
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 20px) rgb(79, 70, 229, 0.3);
+    animation: flutuar 5s ease-in-out infinite;
+    
+}
+
+
+@keyframes flutuar {
+    0%,100% {
+        transform: translateY(0);
+    }       
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.cabecalho {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 100px;
+    backdrop-filter: blur(3px);
+
+
+
+}
+
+.fundao {
+    background-image: url(imagem/jackalem.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100dvh;
+    padding: 20px 0px;
+    position: relative;
+    align-items: center;
+    margin: 0 auto;
+
+
+
+
+}
+
+
+
+h1 {
+    font-size: 3em;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 100px;
+    box-shadow: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(198, 29, 253, 1) 33%, rgba(244, 172, 103, 1) 66%, rgba(247, 247, 246, 1) 91%);
+    border-radius: 70px 20px;
+}
+
+.job {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: darkslategray;
+    text-align: center;
+    margin-top: 10px;
+    border: black, 5px bold;
+    font-style: normal;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: 800;
+    color: cyan;
+    text-align: center;
+    margin: 10px 0px;
+    font-style: italic;
+    border-radius: 10px;
+
+}
+
+.proj {
+    -webkit-box-shadow: -3px 30px 66px -1px rgba(255, 255, 255, 1);
+    -moz-box-shadow: -3px 30px 66px -1px rgba(255, 255, 255, 1);
+    box-shadow: -3px 30px 66px -1px rgba(255, 255, 255, 1);
+}
+
+.titulo-projeto {
+    color: rgba(207, 207, 207, 0.952);
+    font-size: 1.9rem;
+
+
+}
+
+.caixa-sobre1 {
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(198, 29, 253, 1) 33%, rgba(244, 172, 103, 1) 66%, rgba(247, 247, 246, 1) 91%);
+    margin: 500px, 0px;
+    padding: 20px;
+    left: 0;
+    text-align: center;
+}
+
+.paragrafo-sobre {
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 30px;
+    color: antiquewhite;
+    font-weight: 90;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.caixa-projetos {
+    display: flexbox;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    background-image: url(imagem/jackalem.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0 auto;
+    padding: 3px;
+    gap: 1px;
+    height: 100dvh;
+
+
+}
+
+.projeto-card {
+    background-color: #0f172a00;
+    border-radius: 10px;
+    
+   
+    transition: all 0.5s ease;
+    cursor: pointer;
+    
+    transition: all 0.5s ease;
+
+
+}
+
+.texto {
+    margin: 20px;
+    border: 5px solid rgba(12, 66, 184, 0);
+
+
+}
+
+.projeto-card:hover {
+    transform: scale(1.05);
+}
+
+p {
+    color: rgb(255, 255, 255);
+    line-height: 1.2rem;
+}
+
+.contatos-caixa {
+    margin-top: 500px;
+    border: 5px solid rgba(12, 66, 184, 0);
+}
+
+.formulario {
+
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+
+
+
+}
+
+.grupo-form {
+    margin-bottom: 1.5rem;
+}
+
+.campo-form {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    color: var(--claro);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+button {
+    background-image: linear-gradient(45deg, #6ab1d7, #33d9de, #002878);
+    color: var(--claro);
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+}
+
+footer {
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    height: 20px;
+    width: 100%;
+
+
+}
+
+.pingo {
+
+
+
+    border: 1px solid blue;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 10px 0px;
+    background-color: rgba(255, 255, 255, 0.05);
+
+
+
+}
